@@ -4,6 +4,7 @@ sudo apt-get upgrade
 sudo apt-get install dnsmasq hostapd
 sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd
+python ./config.py $1 $2 $3
 sudo cp ./dhcpcd.conf /etc/dhcpcd.conf
 sudo service dhcpcd restart
 sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
